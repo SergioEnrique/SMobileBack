@@ -1,0 +1,41 @@
+<div class="row">
+    <form class="col s12" id="formInicial">
+        <div class="row">
+            <div class="container">
+                <div class="col s12">
+                    <p>Por confirme el código de su país e introduzca su número de teléfono</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <select class="" ng-model="inicio.pais" material-select watch>
+                    <option value="">Seleccion un país</option>
+                    <option value="+52">México</option>
+                    <option value="+01">Estados Unidos</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="input-field col s4">
+                    <input ng-value="inicio.pais" id="numero_codigo" type="text" class="validate">
+                    <label class="active" for="numero_codigo">Codigo</label>
+                </div>
+
+                <div class="input-field col s8">
+                    <input ngMinlength="10" ng-model="inicio.numero" id="numero_celular" type="number" class="validate">
+                    <label for="numero_celular">Numero de Celular</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="center-align">
+                <button class="btn waves-effect waves-light" type="submit" name="enviar" ng-click="enviarNumero(inicio);" ng-disabled="!inicio.numero">Enviar
+                    <i class="material-icons right">send</i>
+                </button>
+
+            </div>
+        </div>
+    </form>
+</div>

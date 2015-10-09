@@ -12,8 +12,8 @@ angular.module('slangchatApp')
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/inicioNumero.html',
+        controller: 'inicioNumero'
       })
 
       .when('/chat', {

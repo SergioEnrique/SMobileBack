@@ -17,5 +17,6 @@ angular.module('slangchatApp', [
     'ngSanitize',
     'ngTouch',
     'firebase',
-    'firebase.ref'
+    'firebase.ref',
+    'ui.materialize'
   ]);
