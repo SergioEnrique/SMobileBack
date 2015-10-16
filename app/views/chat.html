@@ -1,13 +1,33 @@
-
-<h2>Chat</h2>
-
-<form>
-  <input placeholder="Message..." ng-model="newMessage">
-  <button type="submit" ng-click="addMessage(newMessage);newMessage = null;">send</button>
-</form>
-
-<ul id="messages" ng-show="messages.length">
-  <li ng-repeat="message in messages | reverse">{{message.text}}</li>
-</ul>
-
-<p class="alert alert-danger" ng-show="err">{{err}}</p>
+<div class="row">
+    <div class="col s12">
+        <ul class="tabs" tabs>
+            <li class="tab col s3"><a class="active" href="#llamadas">llamadas</a></li>
+            <li class="tab col s3"><a href="#chat">Chat</a></li>
+            <li class="tab col s3"><a href="#contactos">Contactos</a></li>
+        </ul>
+    </div>
+    <div id="llamadas" class="col s12">
+        <p>trabajando...</p>
+    </div>
+    <div id="chat" class="col s12">
+        <div class="contenedorChat">
+            <div class="mensajes">
+                
+            </div>
+            <div class="enviar mantenerAbajo">
+                <div class="col s10" input-field>
+                    <input type="text" ng-model="mensaje" length="50">
+                    <label>Mensaje</label>
+                </div>
+                <div class="col s2">
+                    <button class="btn waves-effect waves-light abajoBtn" type="submit" name="enviar"  g-disabled="!inicio.numero">Enviar
+                    <i class="material-icons right">send</i>
+                </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contactos" class="col s12">
+        <p>trabajando...</p>
+    </div>
+</div>

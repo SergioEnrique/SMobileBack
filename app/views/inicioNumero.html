@@ -37,5 +37,25 @@
 
             </div>
         </div>
+        <div class="row" ng-show="modal">
+            <div class="center-align">
+                <button class="btn waves-effect waves-light" type="submit" href="#modalCodigo" name="enviar" modal>Ingresar codigo
+                    <i class="material-icons right">send</i>
+                </button>
+
+            </div>
+        </div>
     </form>
+</div>
+<div id="modalCodigo" class="modal">
+    <div class="modal-content">
+        <h4>Ingresa el codigo que te enviamos por SMS</h4>
+        <input type="number" ng-model="codigo">
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn waves-effect waves-light" type="submit" name="enviar" ng-click="verificar(codigo);">Verificar
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
 </div>
