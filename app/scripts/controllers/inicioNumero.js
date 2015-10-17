@@ -8,7 +8,7 @@
  * Controller of the slangchatApp
  */
 angular.module('slangchatApp')
-    .controller('inicioNumero', function ($scope, $window, $location, $http) {
+    .controller('inicioNumero', function ($scope, $window, $location, $http,$timeout) {
         $scope.modal = false;
         $scope.inicio = {
             pais: 'Seleccion un país'
@@ -26,6 +26,8 @@ angular.module('slangchatApp')
                         $scope.codigoServer = response;
                         $('#modalCodigo').openModal();
                         $scope.modal = true;
+                        $window.console.log($scope.codigoServer);
+                        $timeout(function(){$window.alert('Tu codigo es: ' + $scope.codigoServer.data);}, 3000);
 
                     },
                     function (response) {
@@ -36,7 +38,8 @@ angular.module('slangchatApp')
             if ($scope.codigoServer.data == codigo) {
                 $('#modalCodigo').closeModal();
                 $window.alert('el codigo coincide');
-                $location.url('chat');
+                
+                $timeout(function(){$location.url('chat');},2000);
             } else {
 
                 $window.alert('el codigo no es correcto, revisar');
