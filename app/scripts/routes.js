@@ -20,5 +20,9 @@ angular.module('slangchatApp')
         templateUrl: 'views/chat.html',
         controller: 'ChatCtrl'
       })
+        .when('/conversacion/:grupo', {
+        templateUrl: 'views/conversacion.html',
+        controller: 'ConversacionCtrl'
+      })
       .otherwise({redirectTo: '/'});
   }]);

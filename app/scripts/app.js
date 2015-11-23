@@ -18,5 +18,6 @@ angular.module('slangchatApp', [
     'ngTouch',
     'firebase',
     'firebase.ref',
-    'ui.materialize'
+    'ui.materialize',
+    'ngStorage'
   ]);
