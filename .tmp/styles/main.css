@@ -1,0 +1,40 @@
+.mantenerAbajo {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.abajoBtn {
+position: fixed;
+    bottom: 16px;
+
+}
+.logo{
+
+    padding-left: 50px !important;
+    
+}
+
+.tabShow{
+    
+    
+    display: block !important;
+    
+    
+}
+
+.tabHide{
+    
+    
+    display: none !important;
+    
+    
+}
+
+.imagenChat{
+    
+    
+    width: 40px;
+    height: auto;
+    
+    
+}
